@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="/Client/Common/CEF/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="left-container container">
+        <div class="donut-chart-block block">
+            <h2 class="titular">РЮКЗАК</h2>
+            <div class="loading">                
+                <div class="progress-bar">
+                    <span id="bag_percent_progress" style="background-color:#4fc4f6; width: 0%"></span>
+                </div>
+                <center><p>Заполнен на <span id="bag_percent">0</span>%</p></center>
+            </div>
+            <ul class="os-percentages horizontal-list">
+                <li>
+                    <p class="ios os scnd-font-color">Цвет. мет.</p>
+                    <p id="cabel" class="os-percentage">0</p>
+                </li>
+                <li>
+                    <p class="mac os scnd-font-color">Бумага</p>
+                    <p id="paper" class="os-percentage">0</p>
+                </li>
+                <li>
+                    <p class="linux os scnd-font-color">Бутылки</p>
+                    <p id="bottles" class="os-percentage">0</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    document.getElementById("JobStart").onclick = function ()  //this is the function we called with OnClick in the last step
+    {
+        resourceCall("JobStart"); //call a function named "login" in our javascript file.
+    };
+</script>

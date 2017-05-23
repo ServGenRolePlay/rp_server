@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="/Client/Common/CEF/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    </head>
+    <body>
+        <div id="register-form">
+            <div id="login-form">
+				<img src="Logo.png">			
+                <div class="menu-box account block">
+                    <h2 class="titular">РЕГИСТРАЦИЯ</h2>
+                    <center>
+                        <p><font color="white" face="Arial">Добро пожаловать на сервер </font><font color="yellow" face="Arial">4-liveRP.</font></p>	
+                        <p>Для доступа на сервер необходимо зарегистрироваться.</p></center>
+                    <div class="input-container">
+                        <input id="password" required type="password" placeholder="Пароль" class="password text-input">
+                        <div class="input-icon password-icon"><span class="fa-lock scnd-font-color"></span></div>
+                    </div>
+                    <a id="loginbutton"  class="subscribe button" href="#">Зарегистрироваться</a>
+                    <br/>
+                    <div id="error" class="fb-sign-in" style="display:none"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("loginbutton").onclick = function ()
+            {
+                document.getElementById('error').style.display = "none";
+                var password = document.getElementById("password").value;
+				if(password.length == 0){
+					ErrorMessage('Укажите пароль!');
+					return;
+				}
+                resourceCall("Login", password);
+            };
+
+            function  ErrorMessage(message)
+            {
+                document.getElementById('error').style.display = "block";
+                document.getElementById('error').innerHTML = "<center><i class='fa fa-exclamation-triangle'></i> " + message + "</center>";
+            }
+        </script>
+    </body>
+</html>

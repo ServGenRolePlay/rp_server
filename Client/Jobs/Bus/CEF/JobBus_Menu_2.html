@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="/Client/Common/CEF/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="left-container container">
+        <div class="menu-box block">
+            <h2 class="titular">АВТОБУСЫ</h2>
+            <span class="fb-sign-in">
+                <center>Выберите маршрут:</center>
+            </span>
+            <ul class="menu-box-menu">
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="1" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№1 (Промзона)<div class="menu-box-number">350$</div></a>
+                </li>
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="2" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№2 (Aэропорт)<div class="menu-box-number">450$</div></a>
+                </li>
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="3" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№3 (До пляжа)<div class="menu-box-number">350$</div></a>
+                </li>
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="4" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№4 (Междугородний #1)<div class="menu-box-number">700$</div></a>
+                </li>
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="5" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№5 (Мэрия)<div class="menu-box-number">450$</div></a>
+                </li>
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="6" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№6 (Междугородний #2)<div class="menu-box-number">1200$</div></a>
+                </li>
+                <li>
+                    <a class="menu-box-tab JobBusStart" data-tid="7" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-bus scnd-font-color"></span>№7 (Междугородний #3)<div class="menu-box-number">3500$</div></a>
+                </li>
+                <li>
+                    <a id="MenuBack" class="menu-box-tab" href="#"><span class="icon fa-arrow-left scnd-font-color"></span>Назад</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    var buttonClick = document.getElementsByClassName('JobBusStart');
+    for (i = 0; i < buttonClick.length; i++) {
+        buttonClick[i].addEventListener('click', function (evt) {
+            resourceCall("JobBusStart", (evt.target).getAttribute('data-tid'));
+        });
+    }
+    document.getElementById("MenuBack").onclick = function () {
+        resourceCall("MenuBack");
+    };
+</script>

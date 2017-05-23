@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="/Client/Common/CEF/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="left-container container">
+        <div class="menu-box block">
+            <h2 class="titular">Работа грузчика</h2>
+            <ul class="menu-box-menu">
+                <li>
+                    <a id="JobStart" class="menu-box-tab" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-briefcase scnd-font-color"></span>Начать работу<div class="menu-box-number">12$ за ящик</div></a>
+                </li>
+                <li>
+                    <a id="Yval" class="menu-box-tab" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-sign-out scnd-font-color"></span>Закончить работу</a>
+                </li>
+                <li>
+                    <a id="CloseMenu" class="menu-box-tab" href="#"><span class="icon fa-times-circle scnd-font-color"></span>Закрыть меню</a>
+                </li>               
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    document.getElementById("JobStart").onclick = function ()  //this is the function we called with OnClick in the last step
+    {
+        resourceCall("JobStart"); //call a function named "login" in our javascript file.
+    };
+    document.getElementById("Yval").onclick = function ()  //this is the function we called with OnClick in the last step
+    {
+        resourceCall("Yval"); //call a function named "login" in our javascript file.
+    };
+    document.getElementById("CloseMenu").onclick = function ()  //this is the function we called with OnClick in the last step
+    {
+        resourceCall("Close"); //call a function named "login" in our javascript file.
+    };
+</script>

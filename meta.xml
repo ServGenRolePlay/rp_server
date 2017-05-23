@@ -1,0 +1,62 @@
+<meta>
+  <info name="RP_Server" author="RP_Server" type="script" description="Test RP_Server" />
+
+  <assembly ref="MySql.Data.dll"/>
+  <assembly ref="System.Xml.dll"/>
+  <assembly ref="System.Data.dll"/>
+  <assembly ref="Newtonsoft.Json.dll"/>
+
+  <!-- Main -->
+  <script src="RP_Server.dll" type="server" lang="compiled" />
+
+  <script src="Client/RP_Server_Keyevent.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_playerBlips.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_Entity.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_GTAO_Char.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_playerList.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_RayCast.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_MainMenu.js" type="client" lang="javascript"/>
+  <script src="Client/RP_Server_ClientDevTool.js" type="client" lang="javascript"/>
+  <!--<script src="RP_Server_Fuel.js" type="client" lang="javascript"/>-->
+  
+  <!-- authorsystem  ==> -->
+  <script src="Client\AuthorSystem\Authorization.js" type="client" lang="javascript"/>
+  <file src="Client\AuthorSystem\CEF\css\style.css" />
+  <file src="Client\AuthorSystem\CEF\Logo.png" />
+  
+  <!-- RegisterPage -->
+  <file src="Client\AuthorSystem\CEF\RegisterPage.html" />
+  
+  <!-- LoginPage -->
+  <file src="Client\AuthorSystem\CEF\LoginPage.html" />
+
+  <!-- SelectCharPage -->
+  <file src="Client\AuthorSystem\CEF\SelectCharPage.html" />
+  <!-- <== authorsystem -->
+  
+  <file src="Client\Common\CEF\css\font-awesome.min.css" />
+  <file src="Client\Common\CEF\fonts\fontawesome-webfont.woff2" /> 
+  <file src="Client\Common\CEF\fonts\fontawesome-webfont.ttf" />   
+  
+  <!-- JobMenu ==> -->
+  <file src="Client\Jobs\Gryz\CEF\JobGryz_Menu_1.html" />
+  <file src="Client\Jobs\Gryz\CEF\css\style.css" />
+  <script src="Client\Jobs\Gryz\JobGryz.js" type="client" lang="javascript"/>
+
+  <file src="Client\Jobs\Immigrant\CEF\JobImmigrant.html" />
+  <file src="Client\Jobs\Immigrant\CEF\css\style.css" />
+  <script src="Client\Jobs\Immigrant\JobImmigrant.js" type="client" lang="javascript"/>
+
+  <file src="Client\Jobs\Bus\CEF\JobBus_Menu_1.html" />
+  <file src="Client\Jobs\Bus\CEF\JobBus_Menu_2.html" />
+  <file src="Client\Jobs\Bus\CEF\css\style.css" /> 
+  <script src="Client\Jobs\Bus\JobBus.js" type="client" lang="javascript"/>
+
+  <script src="Client\Jobs\Taxi\JobTaxi.js" type="client" lang="javascript"/>
+  <!-- JobMenu <== -->
+
+  <!-- Settings -->
+  <settings>
+    <setting name="whiteList_Enabled" value="true" default="true"/>
+  </settings>
+</meta>

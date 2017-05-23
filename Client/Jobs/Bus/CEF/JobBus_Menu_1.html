@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="/Client/Common/CEF/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="left-container container">
+        <div class="menu-box block">
+            <h2 class="titular">АВТОБУСЫ</h2>
+            <ul class="menu-box-menu">
+                <li>
+                    <a id="JobSelectMarshryt" class="menu-box-tab" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-briefcase scnd-font-color"></span>Начать работу</a>
+                </li>
+                <li>
+                    <a id="Yval" class="menu-box-tab" href="#" style="border-bottom: 1px solid #1f253d;"><span class="icon fa-sign-out scnd-font-color"></span>Закончить работу</a>
+                </li>
+                <li>
+                    <a id="CloseMenu" class="menu-box-tab" href="#"><span class="icon fa-times-circle scnd-font-color"></span>Закрыть меню</a>
+                </li>
+            </ul>
+        </div>
+    </div>  
+</body>
+
+</html>
+<script type="text/javascript">
+    document.getElementById("JobSelectMarshryt").onclick = function ()
+    {
+        resourceCall("JobSelectMarshryt"); 
+    };
+    document.getElementById("Yval").onclick = function ()
+    {
+        resourceCall("Yval"); 
+    };
+    document.getElementById("CloseMenu").onclick = function ()
+    {
+        resourceCall("CloseMenu"); 
+    };
+</script>

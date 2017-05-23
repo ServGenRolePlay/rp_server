@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Client/Common/CEF/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+    <div id="register-form">
+        <div id="login-form">
+            <img src="Logo.png">
+            <div class="menu-box account block">
+                <h2 class="titular">Выбор персонажа</h2>
+                <ul class="menu-box-menu">
+                    <span id="CharsList"></span>
+                    <li>
+                        <a id="QuitPage" class="menu-box-tab" href="#"><span class="icon fa-times-circle scnd-font-color"></span>Выйти</a>
+                    </li>
+                </ul>
+                <div id="error" class="fb-sign-in" style="display:none"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("QuitPage").onclick = function () {
+            resourceCall("QuitPage");
+        };
+
+        function SEND_CHARACTER_DATA(message) {
+            document.getElementById('CharsList').innerHTML = message;
+            var buttonClick = document.getElementsByClassName('CHARLIST_REMOVE_CHAR');
+            for (i = 0; i < buttonClick.length; i++) {
+                buttonClick[i].addEventListener('click', function (evt) {
+                    evt.stopPropagation();
+                    document.getElementById('char' + (evt.target).getAttribute('data-char')).remove();
+                    resourceCall("DeleteChar", (evt.target).getAttribute('data-char'));                   
+                });
+            }
+            var buttonClick = document.getElementsByClassName('CHARLIST_START_PLAY');
+            for (i = 0; i < buttonClick.length; i++) {
+                buttonClick[i].addEventListener('click', function (evt) {
+                    resourceCall("StartPlay", (evt.target).getAttribute('data-char'));
+                });
+            }   
+        }
+    </script>
+</body>
+</html>
